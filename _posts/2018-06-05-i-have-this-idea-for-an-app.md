@@ -13,9 +13,9 @@ for a more detailed description
 * Xcode has autocomplete
 * `Navigation Controller` added on the main `View Controller` allows for the user
 to navigate between pages
-* create `Segues` between different pages
+* `Segues` connect 2 View Controllers
 * connect the `View Controller` to a different class with the `Identity Inspector`
-
+  * then, you can connect `@IBOutlet` to the corresponding values
 
 ---
 ### Object Library
