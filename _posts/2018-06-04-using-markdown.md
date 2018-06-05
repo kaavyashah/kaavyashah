@@ -5,22 +5,29 @@ title: "Using Markdown"
 ---
 ## Headers
 Header sizes are dependent upon the `#`s that come before the heading itself.
-Usually, 1 hash preceding the header is the largest size, but for the purposes of jekyll
-use 2 to create the largest header.
+
 ```
+# Header 1
+
+Alternative Header 1
+---
 ## Header 2
 
 Alternative Header 2
----
+===
 ### Header 3
 #### Header 4
 ##### Header 5
 
 ```
+# Header 1
+
+Alternative Header 1
+---
 ## Header 2
 
 Alternative Header 2
----
+===
 ### Header 3
 #### Header 4
 ##### Header 5
@@ -86,25 +93,7 @@ print s
 ```
 No language indicated
 ```
-For jekyll specifically, blocks of code can be shown by beginning a block with `{ % highlight ruby % }`
-and ending the block with `{ % endhighlight % }`. When actually typing, remove the space between the
-`{` and `%` and the `%` and `}`.
-```
-{ % highlight ruby % }
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{ % endhighlight % }
-```
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+
 ---
 ## Lists
 Unordered lists can be created using `-` or `*`.  To create nested lists, indent
