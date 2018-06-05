@@ -107,3 +107,33 @@ print_hi('Tom')
 {% endhighlight %}
 ---
 ## Lists
+Unordered lists can be created using `-` or `*`.  To create nested lists, indent
+all items underneath the desired line.
+```
+- one thing
+* another thing
+  * another thing
+```
+- one thing
+* another thing
+  * another thing
+To create numbered lists, put a number at the beginning of each line.
+```
+1. First
+2. Second
+3. Third
+```
+1. First
+2. Second
+3. Third
+### Task Lists
+```
+- [x] This is completed
+- [ ] This is incomplete
+- [ ] Let's just throw another in
+```
+- [x] This is completed
+- [ ] This is incomplete
+- [ ] Let's just throw another in
+
+---
