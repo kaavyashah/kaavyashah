@@ -131,3 +131,8 @@ To create numbered lists, put a number at the beginning of each line.
 - [ ] Let's just throw another in
 
 ---
+### Arrows
+* `&uparrow` = &uparrow
+* `&downarrow` = &downarrow
+* `&leftarrow` - &leftarrow
+* `&rightarrow` = &rightarrow
