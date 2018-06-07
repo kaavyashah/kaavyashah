@@ -31,6 +31,8 @@ and selecting **View as:** which will open up a panel with all other iOS device 
   corner of the **Interface Builder**
 * **Connections inspector** shows all made connections
   * select the arrow-shaped button at the top left of the **Utilities** pane
+* **Attributes inspector** controls the specifics of objects ex: color, values, etc.
+  * icon that looks like a downwards arrow from the top of the **Utilities** pane
 
 ### Adding Buttons and Objects
 * from the *storyboard* go to the **Object Library**
@@ -53,7 +55,34 @@ clicking on the shaded circle next to `@IBAction func ...`
   1. change the view in the *storyboard*
   2. change the **Supported Device Orientations** setting
     * in the **View as:** panel, change the **Orientation**
-    * in the Simulator menu bar, click **Hardware** &rightarrow **Rotate Left** or **Rotate Right**
+    * in the Simulator menu bar, click **Hardware** which opens **Rotate Left** or **Rotate Right**
     * Click the blue app icon next to the app name from the top of the **Project navigator**.  Then select
     the **General** tab and locate **Deployment info** and select only the **Device Orientation**.  This prevents
     the screen from switching to the orientations that are not selected if the device is turned around.
+
+### Objects, Data, and Methods
+Swift is *object oriented*
+* **Objects** - building blocks of program, each object is responsible for one part of the program
+* **Data** - contains something, ex: button itself, color and size of button
+* **Methods** - responsible for functionality, does something
+
+All methods start with the word `func` and have parenthesis
+```
+@IBAction func showAlert() {
+  ...
+}
+```
+In order to have a function take in parameters, place the parameter inside of the parentheses.  If it will
+always be a certain object, make the connection from the object to the method.
+```
+@IBAction func sliderMoved(_ slider: UISlider) {
+  print("Slider value is \(slider.value)")
+}
+```
+
+### Variables
+Variables must have a specific data type. The scope of the variables determine where it can be accessed, and are the
+following:
+  1. *Global scope* - accessible through  duration of app
+  2. *Instance scope* - accessible through duration of object
+  3. *Local scope* - accessible through duration of method 
