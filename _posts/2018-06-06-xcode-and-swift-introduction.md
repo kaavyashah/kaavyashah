@@ -33,6 +33,8 @@ and selecting **View as:** which will open up a panel with all other iOS device 
   * select the arrow-shaped button at the top left of the **Utilities** pane
 * **Attributes inspector** controls the specifics of objects ex: color, values, etc.
   * icon that looks like a downwards arrow from the top of the **Utilities** pane
+* **Project Settings** can be navigated to by clicking on the blue icon next to the app title at
+the top of the **Navigator Area**
 
 ### Adding Buttons and Objects
 * from the *storyboard* go to the **Object Library**
@@ -40,13 +42,28 @@ and selecting **View as:** which will open up a panel with all other iOS device 
 * double click to edit the Text
 
 ### Make Connections
-* from the *storyboard*, click the desired object
-* hold the `Control` key and drag up to the desired **View Controller**. A blue line will drag through.
-* let go, and a menu will appear, containing **Action Segue** and **Sent Events**
+There are many different ways to make connections.
+1. Method 1:
+  * from the *storyboard*, click the desired object
+  * hold the `Control` key and drag up to the desired **View Controller**. A blue line will drag through.
+  * let go, and a menu will appear, containing **Action Segue** and **Sent Events**
       * **Sent Events** shows actions from source code that can be attached to the *storyboard*
-* click on the desired function
-* check that the connection was made through the **Connections inspector** or by going to the source code and
-clicking on the shaded circle next to `@IBAction func ...`
+  * click on the desired function
+2. Method 2:
+  * open the *storyboard*, hold `control` and click on object
+  * from the pop-up menu that appears, find **Referencing Outlets**
+  * click open circle next to **New Referencing Outlet** and drag to **View Controller**
+  * select desired connection
+3. Method 3:
+  * open the *storyboard*, click on the object
+  * go to the **Connections inspector**
+  * drag from **New Referencing Outlet** to yellow circle at the top of the `storyboard`
+  * choose the desired connection from the pop-up
+* check that the connection was made by:
+  * through the **Connections inspector** or by going to the source code and
+  clicking on the shaded circle next to `@IBAction func ...`
+  * open the *storyboard*, hold `control` and click on object, pop-up menu that appears shows all connections
+* to see all made connections, right click on **View Inspector** from the *storyboard*
 
 ### Portrait vs. Landscape
 * developers use *points*, designers use *pixels*
@@ -80,9 +97,10 @@ always be a certain object, make the connection from the object to the method.
 }
 ```
 
-### Variables
-Variables must have a specific data type. The scope of the variables determine where it can be accessed, and are the
-following:
+### Variables and Constants
+**Variables** must have a specific data type and are created using `var`.
+The scope of the variables determine where it can be accessed, and are the following:
   1. *Global scope* - accessible through  duration of app
   2. *Instance scope* - accessible through duration of object
-  3. *Local scope* - accessible through duration of method 
+  3. *Local scope* - accessible through duration of method
+**Constants** are like variables, but can never change. They are created using `let`.
