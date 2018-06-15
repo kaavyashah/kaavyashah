@@ -20,7 +20,8 @@ information that isn't necessarily related, on a grey background.  Do the follow
   from the Attribute Inspector.
 
 Make sure to add prototype cells to the table, and if you want a checklist, select **Checkmark** from
-the **Accessory** section from the **Table View Cell**'s attribute inspector.  
+the **Accessory** section from the **Table View Cell**'s attribute inspector.  Additionally, you want to use
+**reuse identifiers**, and make sure your spelling is specific.
 
 ###Table View Protocols
 Two methods to override are the following:
@@ -38,4 +39,9 @@ The `tableView(_:numberOfRowsInSection)` determines how many cells are present, 
 is responsible for the ability for cells to be reused, rather than creating new cells each time. The
 `dequeueReusableCell` will get a copy of the prototype cell, either new or recycled, and the `indexPath` is
 responsible for where the cell is placed.  Using **tags** is a good way to keep track of cells without using
-**@IBOutlets** because you want to keep track of multiple cells.
+**@IBOutlets** because you want to keep track of multiple cells.  
+
+Additionally, iOS uses objects that use **delegation**, which deals with object interaction.  
+The `UITableViewDataSource` is responsible for inserting rows into the tables, and the `UITableViewDelegate`
+deals with the tapping, and in most cases both the data source and delegate should be connected to the table view
+controller.  
